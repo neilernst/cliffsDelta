@@ -1,12 +1,11 @@
 from __future__ import division
 
 
-def cliffsDelta(lst1, lst2,
-                dull = [0.147,  # small
-                        0.33,  # medium
-                        0.474  # large
-                        ][0]):
-    """Returns true if there are more than 'dull' differences"""
+def cliffsDelta(lst1, lst2, **dull):
+
+    """Returns delta and true if there are more than 'dull' differences"""
+    if not dull:
+        dull = {'small': 0.147, 'medium': 0.33, 'large': 0.474} # effect sizes from (Hess and Kromrey, 2004)
     m, n = len(lst1), len(lst2)
     lst2 = sorted(lst2)
     j = more = less = 0
@@ -18,7 +17,24 @@ def cliffsDelta(lst1, lst2,
             j += 1
         less += (n - j)*repeats
     d = (more - less) / (m*n)
-    return abs(d) > dull
+    size = lookup_size(d, dull)
+    return d, size
+
+
+def lookup_size(delta: float, dull: dict) -> str:
+    """
+    :type delta: float
+    :type dull: dict, a dictionary of small, medium, large thresholds.
+    """
+    delta = abs(delta)
+    if delta < dull['small']:
+        return 'negligible'
+    if dull['small'] <= delta < dull['medium']:
+        return 'small'
+    if dull['medium'] <= delta < dull['large']:
+        return 'medium'
+    if delta >= dull['large']:
+        return 'large'
 
 
 def runs(lst):
@@ -31,11 +47,3 @@ def runs(lst):
             i = j
         one = two
     yield j - i + 1, two
-
-
-def _cliffsDelta():
-    """demo function"""
-    lst1 = [1,2,3,4,5,6,7]
-    for r in [1.01, 1.1, 1.21, 1.5, 2]:
-        lst2 = map(lambda x: x*r, lst1)
-        print(r, cliffsDelta(lst1, lst2))  # should return False
