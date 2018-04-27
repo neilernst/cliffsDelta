@@ -45,3 +45,6 @@ class MyTest(unittest.TestCase):
         d, res = cliffsDelta.cliffsDelta(x1, x2)
         self.assertEqual(res, 'large')
         self.assertAlmostEqual(d, -1, 2)
+
+if __name__ == '__main__':
+    unittest.main()
