@@ -1,7 +1,6 @@
-from __future__ import division
+__version__ = "1.0.0"
 
-
-def cliffsDelta(lst1, lst2, **dull):
+def cliffs_delta(lst1, lst2, **dull):
 
     """Returns delta and true if there are more than 'dull' differences"""
     if not dull:
