@@ -1,6 +1,6 @@
 import unittest
 
-from __init__ import cliffs_delta
+from cliffs_delta import cliffs_delta
 
 class MyTest(unittest.TestCase):
 
