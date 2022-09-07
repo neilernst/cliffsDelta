@@ -5,6 +5,8 @@ This is code to calculate the Cliff's Delta effect size metric, which strangely 
 
 # cliffs_delta
 
+[![Downloads](https://static.pepy.tech/personalized-badge/cliffs-delta?period=total&units=international_system&left_color=black&right_color=green&left_text=Downloads)](https://pepy.tech/project/cliffs-delta)
+
 **The Cliff's Delta** statistic is a non-parametric effect size measure that quantifies the amount of difference between two groups of observations beyond p-values interpretation. This measure can be understood as a useful complementary analysis for the corresponding hypothesis testing.
 
 # Installation
