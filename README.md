@@ -31,3 +31,15 @@ print(d,res)
 
 -0.06666666666666667 negligible
 ```
+
+# References
+
+Cliff's original paper is https://psycnet.apa.org/doiLanding?doi=10.1037%2F0033-2909.114.3.494
+
+The code references Hess and Kromrey, https://citeseerx.ist.psu.edu/doc_view/pid/b042a70162663d0c1d9a335fb79c15bd1428321a
+
+The paper mentioning the levels for effect size levels is:
+
+> Exploring methods for evaluating group differences on the NSSE and other surveys: Are the t-test and Cohen’s d indices the most appropriate choices? by J.Romano, J.Kromrey, J.Coraggio, J.Skowronek, L.Devine,Page 14
+
+The PDF of this paper can be found here https://citeseerx.ist.psu.edu/pdf/decb34677fac95f9bab3ab3bc8bdcf01514ea7de
