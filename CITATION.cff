@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Torchiano"
+  given-names: "Marco"
+  orcid: "https://orcid.org/0000-0001-5328-368X"
+- family-names: "Menzies"
+  given-names: "Tim"
+  orcid: "https://orcid.org/0000-0002-5040-3196"
+- family-names: "Ernst"
+  given-names: "Neil"
+  orcid: "https://orcid.org/0000-0001-5992-2366"
+title: "Cliffs Delta"
+version: 1.0
+doi: 
+date-released: 2017-12-18
+url: "https://github.com/neilernst/cliffsDelta"
